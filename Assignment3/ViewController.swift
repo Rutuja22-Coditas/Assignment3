@@ -8,12 +8,15 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var productArray = [Product]()
 
+    var productViewModel = ProductViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        productViewModel.fetchData { (data) in
+            self.productArray = data
+        }
     }
-
-
 }
 
