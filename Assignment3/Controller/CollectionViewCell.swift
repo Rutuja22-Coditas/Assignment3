@@ -13,7 +13,18 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var priceLbl: UILabel!
     @IBOutlet weak var vendorNameLbl: UILabel!
     @IBOutlet weak var vendorAddressLbl: UILabel!
-    @IBAction func addToCartButton(_ sender: Any) {
-        
+    
+    var buttonColor = true
+    @IBAction func addToCartButtonPressed(_ sender: UIButton) {
+        buttonColor = !buttonColor
+        if buttonColor{
+            sender.backgroundColor = .lightGray
+        }
+        else{
+            sender.backgroundColor = .green
+            sender
+        }
     }
+    
+    
 }

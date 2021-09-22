@@ -96,7 +96,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="addToCartButton:" destination="6jQ-QH-PZT" eventType="touchUpInside" id="65d-ED-Asr"/>
+                                                        <action selector="addToCartButtonPressed:" destination="6jQ-QH-PZT" eventType="touchUpInside" id="VEV-cR-bXy"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -152,18 +152,37 @@
         <!--Cart-->
         <scene sceneID="Tkj-ye-Uzm">
             <objects>
-                <viewController id="J33-zF-Xdz" customClass="CartViewController" customModule="Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="J33-zF-Xdz" customClass="CartTableViewController" customModule="Assignment3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lVc-x1-sk4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="50" translatesAutoresizingMaskIntoConstraints="NO" id="Tsh-aY-Cbc">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="J33-zF-Xdz" id="unX-57-p4K"/>
+                                    <outlet property="delegate" destination="J33-zF-Xdz" id="jCA-x7-tlZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="xPo-x6-1Vl"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xPo-x6-1Vl" firstAttribute="bottom" secondItem="Tsh-aY-Cbc" secondAttribute="bottom" id="MVm-3Z-NOi"/>
+                            <constraint firstItem="Tsh-aY-Cbc" firstAttribute="top" secondItem="xPo-x6-1Vl" secondAttribute="top" id="k64-sT-OnC"/>
+                            <constraint firstItem="Tsh-aY-Cbc" firstAttribute="leading" secondItem="xPo-x6-1Vl" secondAttribute="leading" id="pSb-yQ-oPl"/>
+                            <constraint firstItem="xPo-x6-1Vl" firstAttribute="trailing" secondItem="Tsh-aY-Cbc" secondAttribute="trailing" id="sg6-q8-4wN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cart" id="fnu-fg-yi7"/>
+                    <connections>
+                        <outlet property="cartTableView" destination="Tsh-aY-Cbc" id="1Hn-TW-BQb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tp0-50-WkC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1129" y="1438"/>
+            <point key="canvasLocation" x="1128.985507246377" y="1437.7232142857142"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fOW-zD-0IO">
