@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e1h-Oe-7q8">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qbn-gp-wJq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Shop-->
         <scene sceneID="Om7-Tq-qY7">
             <objects>
                 <viewController id="e1h-Oe-7q8" customClass="ViewController" customModule="Assignment3" customModuleProvider="target" sceneMemberID="viewController">
@@ -22,29 +22,29 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hI4-gk-UlV">
-                                    <size key="itemSize" width="197" height="337"/>
+                                    <size key="itemSize" width="242" height="383"/>
                                     <size key="estimatedItemSize" width="193" height="315"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="6jQ-QH-PZT" customClass="CollectionViewCell" customModule="Assignment3" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="197" height="340"/>
+                                        <rect key="frame" x="86" y="0.0" width="242" height="383"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FjX-e9-0oP">
-                                            <rect key="frame" x="0.0" y="0.0" width="197" height="340"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="242" height="383"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pencil.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ks9-ds-F56">
-                                                    <rect key="frame" x="46" y="8.5" width="105" height="103"/>
+                                                    <rect key="frame" x="46" y="8.5" width="150" height="103"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="104" id="Hyv-hr-qIU"/>
                                                         <constraint firstAttribute="width" constant="104" id="Ypf-BB-Rtq"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prodcut name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e67-uc-DwQ">
-                                                    <rect key="frame" x="8" y="120" width="181" height="30"/>
+                                                    <rect key="frame" x="8" y="120" width="226" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="iGK-dY-qxf"/>
                                                     </constraints>
@@ -53,7 +53,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwc-SV-BW4">
-                                                    <rect key="frame" x="10" y="158" width="177" height="21"/>
+                                                    <rect key="frame" x="10" y="158" width="222" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="tst-ZY-Vi6"/>
                                                     </constraints>
@@ -62,7 +62,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vendor name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z2d-gb-ocQ">
-                                                    <rect key="frame" x="10" y="209" width="177" height="21"/>
+                                                    <rect key="frame" x="10" y="209" width="222" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="XL2-g0-z7D"/>
                                                     </constraints>
@@ -71,7 +71,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vendor Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hkR-1I-jVa">
-                                                    <rect key="frame" x="10" y="238" width="177" height="21"/>
+                                                    <rect key="frame" x="10" y="238" width="222" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="sFE-oC-kWY"/>
                                                     </constraints>
@@ -80,14 +80,21 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGc-cH-Dh7">
-                                                    <rect key="frame" x="10" y="279" width="177" height="30"/>
+                                                    <rect key="frame" x="10" y="279" width="222" height="30"/>
+                                                    <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="30" id="YGJ-W7-LDo"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <state key="normal" title="Add to cart">
                                                         <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="titleShadowColor" red="0.66422420739999999" green="0.66424006219999998" blue="0.66423153879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="addToCartButton:" destination="6jQ-QH-PZT" eventType="touchUpInside" id="65d-ED-Asr"/>
                                                     </connections>
@@ -114,7 +121,7 @@
                                                 <constraint firstItem="z2d-gb-ocQ" firstAttribute="top" secondItem="kwc-SV-BW4" secondAttribute="bottom" constant="30" id="vaN-0s-sJe"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="197" height="340"/>
+                                        <size key="customSize" width="242" height="383"/>
                                         <connections>
                                             <outlet property="priceLbl" destination="kwc-SV-BW4" id="S2Q-i1-G4W"/>
                                             <outlet property="productImg" destination="ks9-ds-F56" id="OBN-3M-TW4"/>
@@ -133,19 +140,100 @@
                         <viewLayoutGuide key="safeArea" id="diH-Pw-aER"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Shop" id="zKS-7C-a8F"/>
                     <connections>
                         <outlet property="collectionView" destination="1QX-lu-yb4" id="kE6-9N-rOY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKX-UT-IQ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="388.40579710144931" y="91.741071428571431"/>
+            <point key="canvasLocation" x="-310" y="1438"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="Tkj-ye-Uzm">
+            <objects>
+                <viewController id="J33-zF-Xdz" customClass="CartViewController" customModule="Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lVc-x1-sk4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xPo-x6-1Vl"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cart" id="fnu-fg-yi7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tp0-50-WkC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="1438"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="fOW-zD-0IO">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Qbn-gp-wJq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2fg-0e-4TN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Fv9-9G-WZB" kind="relationship" relationship="viewControllers" id="HPJ-WK-bgc"/>
+                        <segue destination="3ht-xb-KPM" kind="relationship" relationship="viewControllers" id="hGD-6r-Kmk"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PSH-2l-Dgg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="388" y="-108"/>
+        </scene>
+        <!--Products-->
+        <scene sceneID="qcd-wH-9i4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fv9-9G-WZB" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Products" image="list.bullet" catalog="system" selectedImage="list.bullet" id="8SF-fU-WM9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qf8-T2-aRy">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="e1h-Oe-7q8" kind="relationship" relationship="rootViewController" id="ffN-dO-LYm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MP7-h1-3Pe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-310.14492753623193" y="732.58928571428567"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="oHD-0v-Oxr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3ht-xb-KPM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cart" image="cart.fill" catalog="system" id="jdi-DC-xJy">
+                        <color key="badgeColor" systemColor="systemGreenColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1LK-m5-sya">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="J33-zF-Xdz" kind="relationship" relationship="rootViewController" id="2ZT-68-C90"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E3y-bN-teK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1128.985507246377" y="732.58928571428567"/>
         </scene>
     </scenes>
     <resources>
+        <image name="cart.fill" catalog="system" width="128" height="102"/>
+        <image name="list.bullet" catalog="system" width="128" height="88"/>
         <image name="pencil.circle.fill" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

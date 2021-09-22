@@ -35,7 +35,7 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         cell.priceLbl.text = product[indexPath.row].price
         cell.vendorNameLbl.text = product[indexPath.row].vendorname
         cell.vendorAddressLbl.text = product[indexPath.row].vendoraddress
-        //cell.layer.cornerRadius = 10
+        cell.layer.cornerRadius = 10
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.black.cgColor
         

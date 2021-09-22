@@ -14,5 +14,6 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var vendorNameLbl: UILabel!
     @IBOutlet weak var vendorAddressLbl: UILabel!
     @IBAction func addToCartButton(_ sender: Any) {
+        
     }
 }
