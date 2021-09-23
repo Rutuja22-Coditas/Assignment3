@@ -96,7 +96,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="addToCartButtonPressed:" destination="6jQ-QH-PZT" eventType="touchUpInside" id="VEV-cR-bXy"/>
+                                                        <action selector="addToCartPressed:" destination="6jQ-QH-PZT" eventType="touchUpInside" id="Sou-Sd-wNl"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -147,12 +147,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hKX-UT-IQ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-310" y="1438"/>
+            <point key="canvasLocation" x="33" y="1438"/>
         </scene>
         <!--Cart-->
         <scene sceneID="Tkj-ye-Uzm">
             <objects>
-                <viewController id="J33-zF-Xdz" customClass="CartTableViewController" customModule="Assignment3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="cartVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="J33-zF-Xdz" customClass="CartTableViewController" customModule="Assignment3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lVc-x1-sk4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +182,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tp0-50-WkC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1128.985507246377" y="1437.7232142857142"/>
+            <point key="canvasLocation" x="732" y="1438"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="fOW-zD-0IO">

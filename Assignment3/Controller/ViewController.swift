@@ -6,13 +6,18 @@
 //
 
 import UIKit
+protocol DataPass {
+    func dataPassing(productName : String, vendorAddress : String)
+}
 
-class ViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class ViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, add2CartButton{
    
     @IBOutlet weak var collectionView: UICollectionView!
     var product = [Product]()
-
     var productViewModel = ProductViewModel()
+
+    var delegate : DataPass?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         productViewModel.fetchData{
@@ -25,7 +30,7 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
     }
    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(product.count)
+        //print(product.count)
         return product.count
         
     }
@@ -39,8 +44,26 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.black.cgColor
         
+        cell.callDelegate = self
+        cell.index = indexPath
+//        cell.addToCartPressed.tag = indexPath.row
+//        cell.addToCartPressed.addTarget(self, action: #selector(viewDetail), for: .touchUpInside)
         return cell
     }
+//    @objc func viewDetail (sender : UIButton){
+//        let indexPath1 = IndexPath(row: sender.tag, section: 0)
+//        let cart = self.storyboard?.instantiateViewController(identifier: "cartVC") as! CartTableViewController
+//        cart.cartProduct = product
+//        cart.totalPrice = indexPath1.row
+//        print("index",indexPath1.row)
+//        self.navigationController?.pushViewController(cart, animated: true)
+//    }
     
+    func onClickCell(index: Int) {
+        print(index,"index is")
+        delegate?.dataPassing(productName: product[index].productname, vendorAddress: product[index].vendoraddress)
+    }
 }
+
+
 
