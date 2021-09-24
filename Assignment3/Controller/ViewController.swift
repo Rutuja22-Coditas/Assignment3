@@ -6,9 +6,9 @@
 //
 
 import UIKit
-protocol DataPass {
-    func dataPassing(productName : String, vendorAddress : String)
-}
+//protocol DataPass {
+//    func dataPassing(productName : String, vendorAddress : String)
+//}
 
 class ViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, add2CartButton{
    
@@ -16,7 +16,7 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
     var product = [Product]()
     var productViewModel = ProductViewModel()
 
-    var delegate : DataPass?
+    //var delegate : DataPass?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +46,8 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         
         cell.callDelegate = self
         cell.index = indexPath
+        
+        
 //        cell.addToCartPressed.tag = indexPath.row
 //        cell.addToCartPressed.addTarget(self, action: #selector(viewDetail), for: .touchUpInside)
         return cell
@@ -61,7 +63,10 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
     
     func onClickCell(index: Int) {
         print(index,"index is")
-        delegate?.dataPassing(productName: product[index].productname, vendorAddress: product[index].vendoraddress)
+        let vc = CartTableViewController()
+//        vc.indexId = index
+        vc.cartProduct = product
+        // delegate?.dataPassing(productName: product[index].productname, vendorAddress: product[index].vendoraddress)
     }
 }
 
