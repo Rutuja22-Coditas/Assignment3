@@ -7,12 +7,12 @@
 
 import UIKit
 
-class CartTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class CartTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, addToCart {
     
     @IBOutlet weak var cartTableView: UITableView!
     var cartProduct = [Product]()
-    var abcArray = [Product]()
-    var indexId = 0
+    var indexId : Int = 0
+    var productNamee = [Product]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,34 +24,37 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
         cartTableView.tableFooterView = footer
         
         let label = UILabel(frame: footer.bounds)
-        label.text = "Total Price: \(indexId)"
+        label.text = "Total Price: 0"
         label.textAlignment = .center
         footer.addSubview(label)
-        
+        //sabc()
         print("cartpro",cartProduct)
         print("index",indexId)
+        
         cartTableView.reloadData()
         
     }
+    func abc(){
+        for i in 0...5{
+            if indexId == i{
+                productNamee.append(cartProduct[i])
+                print(productNamee)
+            }
+        }
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = cartTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CartTableViewCell
-        cell.cProductNameLbl.text = cartProduct[indexId].productname
-        cell.cVendorAddressLbl.text = cartProduct[indexId].vendoraddress
-
+        cell.cProductNameLbl.text = "ABC"
         return cell
     }
+    func add2Cart(productName: String, vendorAddress: String) {
+        productNamee[0].productname = productName
     
-//    func dataPassing(productName: String, vendorAddress: String) {
-//        cartProduct[0].productname = productName
-//
-//    }
-    
-   
-
-   
+    }
 }
 

@@ -6,17 +6,17 @@
 //
 
 import UIKit
-//protocol DataPass {
-//    func dataPassing(productName : String, vendorAddress : String)
-//}
 
-class ViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, add2CartButton{
+protocol addToCart {
+    func add2Cart(productName : String, vendorAddress : String)
+}
+class ViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, add2CartButtonIndex{
    
     @IBOutlet weak var collectionView: UICollectionView!
     var product = [Product]()
     var productViewModel = ProductViewModel()
 
-    //var delegate : DataPass?
+    var delegate : addToCart?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,9 +44,9 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.black.cgColor
         
-        cell.callDelegate = self
+        cell.cellIndexDelegate = self
         cell.index = indexPath
-        
+        delegate?.add2Cart(productName: product[indexPath.row].productname, vendorAddress: product[indexPath.row].vendoraddress)
         
 //        cell.addToCartPressed.tag = indexPath.row
 //        cell.addToCartPressed.addTarget(self, action: #selector(viewDetail), for: .touchUpInside)
@@ -61,13 +61,15 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
 //        self.navigationController?.pushViewController(cart, animated: true)
 //    }
     
-    func onClickCell(index: Int) {
+    func onClickButton(index: Int) {
         print(index,"index is")
-        let vc = CartTableViewController()
-//        vc.indexId = index
-        vc.cartProduct = product
-        // delegate?.dataPassing(productName: product[index].productname, vendorAddress: product[index].vendoraddress)
+        let vc = self.storyboard?.instantiateViewController(identifier: "cartVC") as! CartTableViewController
+        vc.indexId = index
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+        
     }
+    
 }
 
 

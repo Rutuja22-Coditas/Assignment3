@@ -7,8 +7,8 @@
 
 import UIKit
 
-protocol add2CartButton {
-    func onClickCell(index: Int)
+protocol add2CartButtonIndex {
+    func onClickButton(index: Int)
 }
 
 class CollectionViewCell: UICollectionViewCell {
@@ -18,11 +18,12 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var vendorNameLbl: UILabel!
     @IBOutlet weak var vendorAddressLbl: UILabel!
 //    @IBOutlet weak var addToCartPressed: UIButton!
-    var callDelegate: add2CartButton?
+    var cellIndexDelegate: add2CartButtonIndex?
     var index : IndexPath?
     
     @IBAction func addToCartPressed(_ sender: UIButton) {
-        callDelegate?.onClickCell(index: index!.row)
+        cellIndexDelegate?.onClickButton(index: index!.row)
+        
     }
     
     var buttonColor = true
