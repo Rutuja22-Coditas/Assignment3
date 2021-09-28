@@ -19,10 +19,12 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var vendorAddressLbl: UILabel!
 //    @IBOutlet weak var addToCartPressed: UIButton!
     var cellIndexDelegate: add2CartButtonIndex?
+    var cartVC = CartTableViewController()
     var index : IndexPath?
     
     @IBAction func addToCartPressed(_ sender: UIButton) {
         cellIndexDelegate?.onClickButton(index: index!.row)
+        cartVC.indexId = 3
         
     }
     

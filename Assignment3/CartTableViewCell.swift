@@ -16,12 +16,15 @@ class CartTableViewCell: UITableViewCell {
     @IBAction func callVendorButton(_ sender: Any) {
     }
     @IBAction func removeFromCartButton(_ sender: Any) {
+        
     }
     @IBOutlet weak var priceLbl: UILabel!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -30,11 +33,5 @@ class CartTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-//    func dataPassing(productName: String, vendorAddress: String) {
-//        cProductNameLbl.text = productName
-//
-//    }
-    
-
-    
+   
 }

@@ -8,14 +8,16 @@
 import UIKit
 
 protocol addToCart {
-    func add2Cart(productName : String, vendorAddress : String)
+    func add2Cart(object:Product)
 }
+
+
 class ViewController: UIViewController,UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, add2CartButtonIndex{
    
     @IBOutlet weak var collectionView: UICollectionView!
     var product = [Product]()
     var productViewModel = ProductViewModel()
-
+    var vc = CartTableViewController()
     var delegate : addToCart?
     
     override func viewDidLoad() {
@@ -44,9 +46,12 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
         cell.layer.borderWidth = 2
         cell.layer.borderColor = UIColor.black.cgColor
         
+        
         cell.cellIndexDelegate = self
         cell.index = indexPath
-        delegate?.add2Cart(productName: product[indexPath.row].productname, vendorAddress: product[indexPath.row].vendoraddress)
+        
+        
+//        delegate?.add2Cart(productName: product[indexPath.row].productname, vendorAddress: product[indexPath.row].vendoraddress)
         
 //        cell.addToCartPressed.tag = indexPath.row
 //        cell.addToCartPressed.addTarget(self, action: #selector(viewDetail), for: .touchUpInside)
@@ -60,15 +65,17 @@ class ViewController: UIViewController,UICollectionViewDelegate, UICollectionVie
 //        print("index",indexPath1.row)
 //        self.navigationController?.pushViewController(cart, animated: true)
 //    }
-    
+   
     func onClickButton(index: Int) {
         print(index,"index is")
-        let vc = self.storyboard?.instantiateViewController(identifier: "cartVC") as! CartTableViewController
-        vc.indexId = index
-        
-        self.navigationController?.pushViewController(vc, animated: true)
-        
+        print("addtocart", product[index])
+        vc.cartProduct = product
+        print("cartProdcut",vc.cartProduct)
+
+        //vc.cartProduct.append(product[index])
+        delegate?.add2Cart(object: product[index])
     }
+    
     
 }
 

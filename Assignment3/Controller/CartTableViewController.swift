@@ -12,8 +12,8 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
     @IBOutlet weak var cartTableView: UITableView!
     var cartProduct = [Product]()
     var indexId : Int = 0
-    var productNamee = [Product]()
-    
+    //var productNamee = [String:String]
+    //let viewController = ViewController()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,33 +28,40 @@ class CartTableViewController: UIViewController, UITableViewDelegate, UITableVie
         label.textAlignment = .center
         footer.addSubview(label)
         //sabc()
-        print("cartpro",cartProduct)
-        print("index",indexId)
+        
+            print("cartpro",self.cartProduct)
+            print("index",self.indexId)
+        
+        
+        
+        //viewController.delegate = self
         
         cartTableView.reloadData()
         
     }
-    func abc(){
-        for i in 0...5{
-            if indexId == i{
-                productNamee.append(cartProduct[i])
-                print(productNamee)
-            }
-        }
-        
-    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return cartProduct.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = cartTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CartTableViewCell
-        cell.cProductNameLbl.text = "ABC"
+        print("array",cartProduct)
+        //viewController.delegate = self
+        cell.cProductNameLbl.text = cartProduct[indexId].productname
+        
+        //cell.delegate = self
         return cell
     }
-    func add2Cart(productName: String, vendorAddress: String) {
-        productNamee[0].productname = productName
-    
+//    func add2Cart(object: String) {
+//        cartProduct[0].productname = object
+//        print("obj",object)
+//    }
+    func add2Cart(object: Product) {
+        cartProduct = [object]
     }
+    
+    
+    
+    
 }
 
